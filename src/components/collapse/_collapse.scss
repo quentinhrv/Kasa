@@ -1,0 +1,74 @@
+@import '../../styles/_main.scss';
+
+.collapse_container {
+    flex-basis: 50%;
+    cursor: pointer;
+    margin: 0 100px -20px 100px;
+    
+}
+
+.collapse_title {
+      background-color: $primary-color;
+      color: $tertiary-color;
+      padding: 0.5em 1em;
+      @include small-radius;
+      display: flex;
+      justify-content: space-between;
+      
+}
+
+.collapse_header {
+    position: relative;
+}
+
+.collapse_toggle {
+    position: absolute;
+    top: -2px;
+    right: 3%;
+}
+
+.collapse_content {
+    background-color: $secondary-color;
+    @include small-radius;
+    position: relative;
+    top: -40px;
+    z-index: -1;
+    padding: 5px 15px 5px 15px;
+    margin-bottom: -30px;
+    max-height: 0;
+}
+
+.collapse_content.transition {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s ease;
+  }
+  
+  .collapse_content.open.transition {
+    max-height: 500px;
+    transition: max-height 1s ease;
+  }
+
+.fa-solid {
+    cursor: pointer;
+    color: $tertiary-color;
+}
+
+@media only screen and (width <= $tablet-breakpoint) {
+    .collapse_container {
+        margin: 0 0 -20px 0;
+    }
+
+    .collapse_title {
+        @include font-size-about-mobile
+    }
+
+    .collapse_content {
+        padding-top: 20px;
+        top: -35px;
+    }
+
+    .collapse_toggle {
+        top: -6px;
+    }
+}

@@ -1,0 +1,73 @@
+// --- FONT-SIZE DESKTOP --- \\
+
+@mixin font-size-standard {
+    font-size: 18px;
+}
+
+@mixin font-size-about {
+    font-size: 24px;
+}
+
+@mixin font-size-about {
+    font-size: 24px;
+}
+
+@mixin font-size-nav {
+    font-size: 24px;
+}
+
+@mixin font-size-banner {
+    font-size: 45px;
+}
+
+@mixin font-size-chevron-caroussel {
+    font-size: 70px;
+}
+
+@mixin font-size-name-accommodation {
+    font-size: 36px;
+}
+
+@mixin font-size-tags {
+    font-size: 12px;
+}
+
+// --- FONT-SIZE MOBILE --- \\
+
+@mixin font-size-standard-mobile {
+    font-size: 14px;
+}
+
+@mixin font-size-nav-mobile {
+    font-size: 12px;
+}
+
+@mixin font-size-banner-mobile {
+    font-size: 24px;
+}
+
+@mixin font-size-about-mobile {
+    font-size: 12px;
+}
+
+@mixin font-size-chevron-caroussel-mobile {
+    font-size: 25px;
+}
+
+@mixin font-size-tags-mobile {
+    font-size: 10px;
+}
+
+// --- BORDER-RADIUS --- \\
+
+@mixin big-radius {
+    border-radius: 25px;
+}
+
+@mixin medium-radius {
+    border-radius: 10px;
+}
+
+@mixin small-radius {
+    border-radius: 5px;
+}

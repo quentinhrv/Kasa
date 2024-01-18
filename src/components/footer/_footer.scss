@@ -1,0 +1,26 @@
+@import '../../styles/_main.scss';
+
+.footer {
+    background-color: $background;
+    margin-top: 25px;
+    padding: 0;
+    text-align: center;
+    height: 160px;
+    width: 100%;
+
+}
+
+.footer_logo {
+    padding-top: 25px;
+}
+
+.footer_text {
+    color: $tertiary-color;
+    font-size: 20px;
+}
+
+@media only screen and (width <= 450px) {
+    .footer_text {
+        font-size: 12px;
+    }
+}

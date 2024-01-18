@@ -1,0 +1,15 @@
+@import '../../styles/main';
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2% 5%;
+}
+
+@media only screen and (width <= $tablet-breakpoint) {
+    .logo {
+        width: 125px;
+        height: 40px;
+    }
+}

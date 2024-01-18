@@ -1,0 +1,146 @@
+@import '../../styles/main';
+
+.infos {
+    display: flex;
+    justify-content: space-between;
+}
+
+.accommodation {
+    &_title {
+        @include font-size-name-accommodation;
+        margin: 20px 0 0 0;
+    }
+
+    &_location {
+        @include font-size-standard;
+        margin: 0;
+    }
+
+    &_tags {
+        display: flex;
+        margin-top: 20px;
+        flex-wrap: wrap;
+    }
+}
+
+.tags {
+    border: solid;
+    @include font-size-tags;
+    padding: 3px 20px 3px 20px;
+    margin-right: 10px;
+    border-radius: 10px;
+    background-color: $primary-color;
+    color: $tertiary-color;
+}
+
+.host {
+    width: 180px;
+}
+
+.host_infos {
+    display: flex;
+    justify-content: right;
+    margin-top: 20px;
+    padding: 0;
+}
+
+.host_picture {
+    height: 70px;
+    width: 70px;
+    border-radius: 35px;
+
+}
+
+.host_name {
+    text-align: right;
+    flex-wrap: wrap;
+    width: 80px;
+    margin-right: 10px;
+    @include font-size-standard
+}
+
+.rating {
+    margin-top: 20px;
+    width: 180px;
+    text-align: right;
+}
+
+.star {
+    margin-left: 10px;
+}
+
+@media only screen  and (width <= $tablet-breakpoint) {
+    .accommodation {
+        &_title {
+            @include font-size-standard;
+        }
+        &_location {
+            @include font-size-standard-mobile;
+            margin-top: 10px;
+        }
+    }
+
+    .tags {
+        @include font-size-tags-mobile;
+        @include small-radius;
+    }
+
+    .host_name {
+        @include font-size-standard-mobile;
+        width: 70px;
+    }
+
+    .star img {
+        height: 15px;
+    }
+
+    .host {
+        width: 130px;
+    }
+
+    .rating {
+        width: 130px;
+    }
+}
+
+@media only screen  and (width <= $mobile-breakpoint) {
+    .infos {
+        display: block;
+    }
+
+    .host {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .host_infos {
+        margin-top: 10px;
+    }
+
+    .star {
+        margin-left: 0px;
+        margin-right: 10px;
+    }
+
+    .star img {
+        height: 12px;
+    }
+
+    .rating {
+        text-align: left;
+    }
+
+    .host_picture {
+        height: 50px;
+        width: 50px;
+        border-radius: 25px;
+    
+    }
+
+    .host_name {
+        font-size: 12px;
+        width: 60px;
+    }
+}

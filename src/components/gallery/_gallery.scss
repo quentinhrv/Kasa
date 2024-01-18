@@ -1,0 +1,37 @@
+@import '../../styles/_main.scss';
+
+.home_gallery {
+    background: $secondary-color;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    @include big-radius;
+    padding: 2%;
+
+    > a {
+        width: 33%;
+    }
+}
+
+@media only screen and (width <= $tablet-breakpoint) {
+    .home_gallery {
+        margin-top: 20px;
+        @include medium-radius;
+
+        > a {
+            width: 50%;
+        }
+    }
+
+}
+
+@media only screen and (width <= $mobile-breakpoint) {
+    .home_gallery {
+        padding: 0;
+        background: $tertiary-color;
+        > a {
+            width: 100%;
+        }
+    }
+}

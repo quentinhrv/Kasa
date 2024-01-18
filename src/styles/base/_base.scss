@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import '../utils/variables';
+@import '../utils//mixin';
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    @include font-size-standard;
+    color: $primary-color;
+    margin: 0 auto;
+}
+
+main {
+  margin: 2% 5%;
+}

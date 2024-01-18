@@ -1,0 +1,23 @@
+@import '../../styles/main';
+
+main {
+    @include font-size-about;
+}
+
+.banner_about {
+    margin-bottom: 61px;
+}
+
+@media only screen and (width <= $tablet-breakpoint) {
+    main {
+        @include font-size-about-mobile;
+    }
+
+    .banner_about .banner {
+        height: 150px;
+    }
+
+    .banner_about {
+        margin-bottom: 0;
+    }
+}

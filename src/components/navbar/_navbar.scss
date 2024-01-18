@@ -1,0 +1,30 @@
+@import '../../styles/_main.scss';
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+    @include font-size-nav;
+
+    a {
+        text-decoration: none;
+        color: $primary-color;
+        
+        &:hover, &.active {
+            text-decoration: underline;
+        }
+    }
+}
+
+@media only screen and (width <= $tablet-breakpoint) {
+    .navbar {
+        gap: 0;
+     
+        a {
+            text-transform: uppercase;
+            @include font-size-nav-mobile;
+            margin-left: 20px;
+        }
+    }
+}

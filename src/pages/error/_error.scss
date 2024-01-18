@@ -1,0 +1,40 @@
+@import '../../styles/main';
+
+.error_page {
+    text-align: center;
+
+    div {
+        h1 {
+            font-size: 288px;
+            margin: 150px 0 50px 0;
+        }
+
+        p {
+            font-size: 32px;
+            padding-bottom: 150px;
+        }
+    }
+
+    a {
+        text-decoration: none;
+        color: $primary-color;
+        text-decoration: underline;
+        }
+
+}
+
+@media only screen and (width <= $tablet-breakpoint) {
+    .error_page {
+        div {
+            h1 {
+                font-size: 96px;
+        }
+
+            p {
+                @include font-size-standard-mobile;
+                text-align: center;
+                margin: -25px 50px 0 50px;
+            }
+        }
+    }
+}

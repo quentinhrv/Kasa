@@ -1,0 +1,45 @@
+@import '../../styles/main';
+
+.collapse_accommodation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+
+    &_description {
+        width: 80%;
+        padding-right: 40px;
+      }
+      &_equipment {
+        width: 80%;
+        padding-left: 40px;
+      }
+}
+
+.collapse_accommodation .collapse_container {
+    margin: 0;
+}
+
+.collapse_accommodation .collapse_toggle {
+    right: 5%;
+}
+
+@media only screen and (width <= $tablet-breakpoint) {
+    .collapse_accommodation {
+        flex-direction: column;
+
+        &_description {
+            padding-right: 0px;
+            width: 100%;
+        }
+
+        &_equipment {
+            padding-left: 0px;
+            width: 100%;
+        }
+    }
+
+    .collapse_accommodation .collapse_toggle {
+        right: 3%;
+    }
+}

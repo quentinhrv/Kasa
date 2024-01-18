@@ -1,0 +1,87 @@
+@import '../../styles/_main.scss';
+
+.slide {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 415px;
+    overflow: hidden;
+}
+
+.slider {
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    @include medium-radius;
+    opacity: 0;
+    transition: opacity ease-in-out 1s;
+
+    & img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        position: absolute;
+        @include medium-radius;
+    }
+
+    &_number {
+        position: absolute;
+        @include font-size-standard;
+        bottom: 5%;
+        left: 50%;
+        color: $tertiary-color;
+    }
+}
+
+.active {
+    opacity: 1;
+}
+
+
+.right-Arrow {
+    display: flex;
+    position: absolute;
+    top: 35%;
+    right: 2%;
+    z-index: 10;
+    cursor: pointer;
+    color: $tertiary-color;
+}
+
+.left-Arrow {
+    display: flex;
+    position: absolute;
+    top: 35%;
+    left: 2%;
+    z-index: 10;
+    cursor: pointer;
+    color: $tertiary-color;
+}
+
+.fa-chevron-left, .fa-chevron-right {
+    @include font-size-chevron-caroussel;
+}
+
+@media only screen  and (width <= $tablet-breakpoint) {
+    .slide {
+        height: 255px;
+    }
+
+    .left-Arrow {
+        top: 40%;
+    }
+
+    .right-Arrow {
+        top: 40%;
+    }
+
+    .slider_number{
+        display: none;
+    }
+
+    .fa-chevron-left, .fa-chevron-right {
+        @include font-size-chevron-caroussel-mobile;
+    }
+}
